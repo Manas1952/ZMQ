@@ -4,6 +4,7 @@ target/
 !**/src/test/**/target/
 
 venv/
+.idea/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
