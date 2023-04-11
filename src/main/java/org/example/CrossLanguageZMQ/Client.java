@@ -1,4 +1,4 @@
-package org.example.CrossLanguage;
+package org.example.CrossLanguageZMQ;
 
 import org.zeromq.SocketType;
 import org.zeromq.ZMQ;
@@ -16,7 +16,7 @@ public class Client
             socket.connect("tcp://localhost:5555");
 
 //            for (int requestNbr = 0; requestNbr != 10; requestNbr++) {
-            String request = "Hello";
+            String request = "Hello python";
 //                System.out.println("Sending Hello " + requestNbr);
             socket.send(request.getBytes(ZMQ.CHARSET), 0);
 

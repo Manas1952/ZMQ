@@ -13,6 +13,7 @@ public class Client {
 
             ZMQ.Socket socket = context.createSocket(SocketType.REQ);
             socket.connect("tcp://localhost:5555");
+            socket.send("", ZMQ.PAIR);
 
 //            for (int requestNbr = 0; requestNbr != 10; requestNbr++) {
                 String request = "Hello";

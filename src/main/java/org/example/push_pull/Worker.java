@@ -20,7 +20,7 @@ public class Worker {
                 System.out.println("-> " + string);
                 Thread.sleep(500);
 
-                sender.send(string, 0);
+                sender.send(string, ZMQ.PAIR);
             }
         }
     }
