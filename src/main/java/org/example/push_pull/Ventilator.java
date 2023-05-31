@@ -27,13 +27,17 @@ public class Ventilator {
 
       for (int iterator = 0; iterator < 100; iterator++) {
 
-        if (!sender.send(iterator + " <-", ZMQ.DONTWAIT)) {
+       boolean sent =  sender.send(iterator + " <-");
+
+        if (!sent) {
           System.out.println(iterator);
+        }else {
+          System.out.println("sent: "+ iterator);
         }
       }
 
       // waiting to transfer tasks
-      Thread.sleep(1000);
+      Thread.sleep(10000);
     }
   }
 }

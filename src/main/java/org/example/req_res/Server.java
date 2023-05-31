@@ -15,7 +15,7 @@ public class Server
 
             while (!Thread.currentThread().isInterrupted()) {
                 System.out.println("receiving...");
-                byte[] reply = socket.recv(0);
+                byte[] reply = socket.recv(ZMQ.PAIR);
                 System.out.println(
                         "Received " + ": [" + new String(reply, ZMQ.CHARSET) + "]"
                 );
